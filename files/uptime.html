@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Uptime</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .uptime-container {
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        .uptime {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="uptime-container">
+        <h2>Bot Uptime</h2>
+        <div class="uptime" id="uptime"></div>
+    </div>
+
+    <script>
+        function fetchUptime() {
+            fetch('/upt')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('uptime').innerText = data.uptime;
+                })
+                .catch(error => console.error('Error fetching uptime:', error));
+        }
+
+        fetchUptime();
+        setInterval(fetchUptime, 1000);  
+    </script>
+</body>
+</html>

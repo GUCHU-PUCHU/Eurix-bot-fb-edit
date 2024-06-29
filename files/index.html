@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bot Information</title>
+        <style>
+            body {
+                background-color: #f0f0f0;
+                color: #333;
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+            .bot-info {
+                background-color: #fff;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            .bot-info h1 {
+                color: #007bff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bot-info">
+            <h1>Bot Information</h1>
+            <p><strong>Title:</strong> <span id="title"></span></p>
+            <p><strong>Author:</strong> <span id="author"></span></p>
+            <p><strong>Contact:</strong> <span id="contact"></span></p>
+            <p><strong>Command:</strong> <span id="command"></span></p>
+            <p>
+                <strong>Total Commands:</strong>
+                <span id="totalCommands"></span>
+            </p>
+            <p>
+                <strong>Total Threads:</strong> <span id="totalThreads"></span>
+            </p>
+            <p><strong>Total Users:</strong> <span id="totalUsers"></span></p>
+<p><strong>BotOwner:</strong> <span id="category"></span></p>
+<p><strong>Bot Name:</strong> <span id="botname"></span></p>
+<p><strong>Admins:</strong> <span id="admins"></span></p>
+        </div>
+
+        <script>
+            async function fetchBotInfo() {
+                const response = await fetch("/info");
+                const data = await response.json();
+
+                document.getElementById("title").innerText = data.title;
+                document.getElementById("author").innerText = data.author;
+                document.getElementById("contact").innerText = data.contact;
+                document.getElementById("command").innerText =
+                    data.commands.join(", ");
+                document.getElementById("totalCommands").innerText =
+                    data.totalCommands;
+                document.getElementById("totalThreads").innerText =
+                    data.totalThreads;
+                document.getElementById("totalUsers").innerText =
+                    data.totalUsers;
+document.getElementById("botname").innerText = data.botname;
+document.getElementById("admins").innerText = data.admins.join(", ");
+
+                const commandsCount = data.commands.length;
+document.getElementById('category').innerText = data.botOwner;
+                const container = document.querySelector(".bot-info");
+                if (commandsCount > 10) {
+                    container.style.height = `${120 + (commandsCount - 10) * 20}px`;
+                }
+            }
+
+            fetchBotInfo();
+        </script>
+    </body>
+</html>

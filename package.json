@@ -1,0 +1,35 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Simple messenger bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "bot",
+    "messenger"
+  ],
+  "author": "Eugene Aguilar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "chalk": "^4.1.2",
+    "express": "^4.19.2",
+    "figlet": "^1.7.0",
+    "fs-extra": "^11.2.0",
+    "https-proxy-agent": "^4.0.0",
+    "moment-timezone": "^0.5.45",
+    "mqtt": "^3.0.0",
+    "node-cron": "^3.0.3",
+    "npmlog": "^7.0.1",
+    "request": "^2.88.2",
+    "semver": "^7.6.2",
+    "ultimate-guitar": "^1.0.3",
+    "yt-search": "^2.11.0",
+    "ytdl-core": "^4.11.5",
+    "bluebird": "^3.7.2"
+  }
+}

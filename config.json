@@ -1,0 +1,25 @@
+{
+  "prefix": "/",
+  "admins": [
+    "61558014946967",
+    "100091459040153"
+  ],
+  "botname": "Kairu bot",
+  "owner": "Eugene Aguilar",
+  "PORT": 3000,
+  "autodowntik": true,
+  "autoreact": true,
+  "opt": {
+    "forceLogin": false,
+    "listenEvents": true,
+    "logLevel": "error",
+    "selfListen": false,
+    "online": true,
+    "autoMarkDelivery": false,
+    "autoMarkRead": false,
+    "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 OPR/84.0.4316.21"
+  },
+  "autobio": true,
+  "autobiostatus": "Made by: https://www.facebook.com/eugene.aguilar.05",
+  "log": "Eurix"
+}
