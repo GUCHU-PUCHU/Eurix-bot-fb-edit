@@ -1,11 +1,9 @@
 {
   "prefix": "/",
   "admins": [
-    "61558014946967",
-    "100091459040153",
-    "100080422647611"
+    "61564843507709",
   ],
-  "botname": "Kairu bot",
+  "botname": "Allysa bot",
   "owner": "Eugene Aguilar",
   "PORT": 3000,
   "autodowntik": true,
